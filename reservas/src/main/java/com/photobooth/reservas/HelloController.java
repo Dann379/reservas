@@ -1,6 +1,7 @@
 package com.photobooth.reservas;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -8,9 +9,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 
     @GetMapping("/hola")
-    @ResponseBody
 
-    public String saludar(){
-        return "hola mundo";
+    public String saludar(Model model){
+        model.addAttribute("nombre", "dann");
+        return "hola";
+    }
+
+    @GetMapping("/adios")
+    public String despedida(Model model)
+    {
+        model.addAttribute("mensaje", "Gracias por hacernos parte de tu dia especial");
+        model.addAttribute("nombre", "Iconica Studios");
+        return "adios";
     }
 }
