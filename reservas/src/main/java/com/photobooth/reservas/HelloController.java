@@ -24,7 +24,7 @@ public class HelloController {
     @GetMapping("/paquetes")
     public String paquetes(Model model) {
         model.addAttribute("mensaje", "Nuestros Paquetes");
-        List<String> paquetes = List.of("Basico", "Premium", "Boda");
+        List<String> paquetes = List.of("Basico", "Premium", "Boda", "XV Años");
         model.addAttribute("paquetes", paquetes);
         return "paquetes";
     }
