@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Paquetes</title>
+</head>
+<body>
+<h1 th:text="${mensaje}">mensaje de pagina</h1>
+<ul>
+    <li th:each="paquete : ${paquetes}" th:text="${paquete}">relleno de lista</li>
+</ul>
+</body>
+</html>
